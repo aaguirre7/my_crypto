@@ -4,7 +4,7 @@
 ## Table of contents
 * [About The Project](#About-The-Project)
 * [Technologies](#technologies)
-* [What was done](#What was done)
+* [What was done](#What-was-done)
 
 ## About The Project
 My_Crypto is an application to view and track cryptocurrency. A user will be able to use the homepage as a reference to crypto prices and to convert currency. This app also offers the ability to store your favorite cryptos and add the amount you have. Making it easy to track their value and your earnings.
