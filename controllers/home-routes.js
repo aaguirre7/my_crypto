@@ -33,8 +33,4 @@ router.get("/coinConverter", (req, res) => {
   res.render("coinConverter", { layout: "index", loggedIn: req.session.loggedIn });
 });
 
-router.get("/about", (req, res) => {
-  res.render("about", { layout: "index", loggedIn: req.session.loggedIn });
-});
-
 module.exports = router;

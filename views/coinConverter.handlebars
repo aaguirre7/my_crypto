@@ -1,36 +1,27 @@
-<section class="coin-title-box">
-<h2>Coin Converter</h2>
 
-<img
-    src="/images/crypto-exchange.svg"
-    height="200px"
-    width="200px"
-  />
-</section>
-<section class="converter-cointainer">
-  <div class="container">
-    <h1 id="from-crypto-name"></h1>
-    <ul id="from-coin-menu" class="list">
-      <li class="from-crypto li-list">BTC</li>
-      <li class="from-crypto li-list">BCH</li>
-      <li class="from-crypto li-list">EOS</li>
-      <li class="from-crypto li-list">ETH</li>
-      <li class="from-crypto li-list">DASH</li>
-      <li class="from-crypto li-list">LTC</li>
-      <li class="from-crypto li-list">XRP</li>
-      <li class="from-crypto li-list">ZEC</li>
-      <li class="from-crypto li-list">ETC</li>
-    </ul>
-  </div>
-
-  <div class="container">
-    <h1 id="to-currency-price"></h1>
-    <ul id="coin-card" class="list">
-      <li class="to-money li-list">USD</li>
-      <li class="to-money li-list">EUR</li>
-      <li class="to-money li-list">GBP</li>
-      <li class="to-money li-list">BTC</li>
-      <li class="to-money li-list">ETH</li>
-    </ul>
+<section class="converter-instructions">
+  <div class="converter-instructions-box">
+  <h2>How to use Coin Converter</h2>
+  <ol>
+    <li>Click on the Coin title to select a crypto from the list.</li>
+    <li>Click on the Currency title to select a Currency from the list.</li>
+    <li>Enter the desired amount of Crypto under the coin title and it will automatically convert.</li>
+  </ol>
   </div>
 </section>
+
+
+
+
+<section class="crypto-converter">
+  <div class="converter-block">
+<!-- Crypto Converter ⚡ Widget -->
+<crypto-converter-widget shadow symbol live background-color="#383a59" border-radius="0.51rem" fiat="united-states-dollar" crypto="bitcoin" amount="" font-family="monospace" decimal-places="3" ></crypto-converter-widget>
+<a href="https://currencyrate.today/" target="_blank" rel="noopener">CurrencyRate.Today</a>
+<script async src="https://cdn.jsdelivr.net/gh/dejurin/crypto-converter-widget@1.5.2/dist/latest.min.js"></script>
+<!-- /Crypto Converter ⚡ Widget -->
+</div>
+</section>
+
+
+
