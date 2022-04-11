@@ -1,6 +1,6 @@
 $(function () {
 
-    // Start counting from the third row
+    // Start counting from the first row
     var counter = 1;
 
     $("#insertRow").on("click", function (event) {
@@ -11,8 +11,8 @@ $(function () {
 
         // Table columns
         cols += '<th scrope="row">' + counter + '</th>';
-        cols += '<td><input class="form-control rounded-0" type="text" name="name" placeholder="Name"></td>';
         cols += '<td><input class="form-control rounded-0" type="text" name="symbol" placeholder="Symbol"></td>';
+        cols += '<td><input class="form-control rounded-0" type="text" name="name" placeholder="Name"></td>';
         cols += '<td><input class="form-control rounded-0" type="text" name="amount" placeholder="Amount"></td>';
         cols += '<td><input class="form-control rounded-0" type="text" name="price" placeholder="Price"></td>';
         cols += '<td><input class="form-control rounded-0" type="text" name="value" placeholder="Value"></td>';
