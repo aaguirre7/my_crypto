@@ -35,18 +35,19 @@
 
                     <!--  Bootstrap table-->
                     <div class="table-responsive">
-                        <table class="table">
+                        <table class="table" >
                             <thead>
                                 <tr>
                                     <th scope="col">#</th>
                                     <th scope="col">Name</th>
                                     <th scope="col">Symbol</th>
+                                     <th scope="col">Amount</th>
                                     <th scope="col">price</th>
                                     <th scope="col">value</th>
 
                                 </tr>
                             </thead>
-                            <tbody>
+                            <tbody id="table">
                                 <tr>
                                     {{#each mycoin}}
                                     <th scope="row">{{id}}</th>
@@ -63,7 +64,7 @@
 
                     <!-- Add rows button-->
                     <a class="btn btn-primary rounded-0 btn-block" id="insertRow" href="#">Add new row</a>
-                    <script src="./javascript/addCoins.js"></script>
+                    <script src="/javascript/addCoins.js"></script>
                 </div>
 
             </div>
