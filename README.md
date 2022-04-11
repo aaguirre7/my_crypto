@@ -138,6 +138,6 @@ Abraham Aguirre Aguirre.Abraham@gmail.com
 <!-- MARKDOWN LINKS & IMAGES -->
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/abraham-aguirre-1b237293/
-[linkedin-url]: https://www.linkedin.com/in/abraham-aguirre-1b237293/
+[linkedin-url]: https://www.linkedin.com/in/julianesquivel/
 [product-screenshot1]: ./public/assets/images/screenshot_1.png
 [
