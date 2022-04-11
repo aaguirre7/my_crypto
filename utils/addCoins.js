@@ -1,4 +1,4 @@
-const require = require(node - require);
+const require = require(node-require);
 const express= require('express');
 const app = express();
 let currentUser;
