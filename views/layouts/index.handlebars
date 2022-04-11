@@ -53,7 +53,11 @@
                     <span>Portfolio:</span></a>
             </li>
             <!-- wallet button -->
+             {{#if loggedIn}}
             <a href="/myCrypto"> {{> walletBtn}}</a>
+            {{else}}
+            <p class="login-message">Login to access your Wallet</p>
+            {{/if}}
             <!-- Divider -->
             <hr class="sidebar-divider">
 
@@ -187,10 +191,10 @@
       <div class="container-fluid">
   <div class="row row-cols-3">
     <div class="col">
-      <a href="#">Github</a>
+      <a href="https://github.com/aaguirre7/my_crypto">Github</a>
     </div>
     <div class="col">
-      <a href="#">Heroku</a>
+      <a href="https://fathomless-ocean-39616.herokuapp.com/">Heroku</a>
     </div>
     <div class="col">
     <a href="/about">About</a>

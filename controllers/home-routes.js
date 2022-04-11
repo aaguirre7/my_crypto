@@ -18,7 +18,7 @@ router.get("/",async (req, res) => {
 });
 
 router.get("/login", (req, res) => {
-  res.render("login", { layout: "index" });
+  res.render("login", { layout: "index", loggedIn: req.session.loggedIn });
 });
 
 router.get("/myCrypto",async (req, res) => {
@@ -39,11 +39,7 @@ router.get("/myCrypto",async (req, res) => {
 });
 
 router.get("/coinConverter", (req, res) => {
-  res.render("coinConverter", { layout: "index" });
-});
-
-router.get("/about", (req, res) => {
-  res.render("about", { layout: "index" });
+  res.render("coinConverter", { layout: "index", loggedIn: req.session.loggedIn });
 });
 
 module.exports = router;
