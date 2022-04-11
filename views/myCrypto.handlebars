@@ -39,8 +39,8 @@
                             <thead>
                                 <tr>
                                     <th scope="col">#</th>
-                                    <th scope="col">Name</th>
                                     <th scope="col">Symbol</th>
+                                    <th scope="col">Name</th>
                                      <th scope="col">Amount</th>
                                     <th scope="col">price</th>
                                     <th scope="col">value</th>
@@ -48,15 +48,16 @@
                                 </tr>
                             </thead>
                             <tbody id="table">
+                                {{#each mCoin}}
                                 <tr>
-                                    {{#each mycoin}}
                                     <th scope="row">{{id}}</th>
-                                    <td>{{name}}</td>
+                                    <th></th>
+                                    <td>{{coin_name}}</td>
                                     <td>{{amount}}</td>
-                                    {{/each}}
                                     <td></td>
                                     <td></td>
                                 </tr>
+                                {{/each}}
                                 <tr>
                             </tbody>
                         </table>

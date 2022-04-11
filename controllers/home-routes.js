@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const axios = require("axios");
-const { User } = require("../models");
+const { User, Coins } = require("../models");
 
 // coin JSON data
 const config = {
@@ -10,13 +10,10 @@ const config = {
     'X-CMC_PRO_API_KEY': 'd3bcf3f1-342e-490a-86e2-484d000fc31b'
   }
 }
-//coinFeed.data.data
-//const { coinsData } = require("../public/javascript/coinsData");
-//console.log(coinsData); 
 
 router.get("/",async (req, res) => {
-  const coinFeed = await axios(config)
-  console.log(coinFeed.data);
+    const coinFeed = await axios(config)
+    console.log(req.session.user_id)
     res.render("main", { layout: "index", coin: coinFeed.data.data, loggedIn: req.session.loggedIn });
 });
 
@@ -25,16 +22,24 @@ router.get("/login", (req, res) => {
 });
 
 router.get("/myCrypto",async (req, res) => {
-  const coinFeed = await axios(config)
-  res.render("myCrypto", { layout: "index", coin: coinFeed.data.data, loggedIn: req.session.loggedIn });
+    const coinFeed = await axios(config);
+    
+    Coins.findAll({
+        where: {
+            user_id: req.session.user_id
+        },
+        
+    }).then(CoinData => {
+        //res.json(CoinData)
+        res.setHeader('Content-Type', 'application/json');
+        const myCoins = CoinData //res.json(CoinData)
+        console.log(myCoins)
+        res.render("myCrypto", { layout: "index", coin: coinFeed.data.data, loggedIn: req.session.loggedIn, mCoin: myCoins });
+    })         
 });
 
 router.get("/coinConverter", (req, res) => {
   res.render("coinConverter", { layout: "index", loggedIn: req.session.loggedIn });
-});
-
-router.get("/about", (req, res) => {
-  res.render("about", { layout: "index", loggedIn: req.session.loggedIn });
 });
 
 module.exports = router;
