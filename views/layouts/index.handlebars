@@ -28,7 +28,7 @@
     <link href="/stylesheets/dashboard.css" rel="stylesheet" />
     <link href="/stylesheets/dashboard1.css" rel="stylesheet" />
     
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" ></script>
   </head>
   <body id="page-top full-pic">
     <div id="wrapper">
@@ -53,7 +53,11 @@
                     <span>Portfolio:</span></a>
             </li>
             <!-- wallet button -->
+             {{#if loggedIn}}
             <a href="/myCrypto"> {{> walletBtn}}</a>
+            {{else}}
+            <p class="login-message">Login to access your Wallet</p>
+            {{/if}}
             <!-- Divider -->
             <hr class="sidebar-divider">
 
@@ -187,13 +191,13 @@
       <div class="container-fluid">
   <div class="row row-cols-3">
     <div class="col">
-      Github
+      <a href="#">Github</a>
     </div>
     <div class="col">
-      Heroku
+      <a href="#">Heroku</a>
     </div>
     <div class="col">
-    About
+    <a href="/about">About</a>
     </div>
   </div>
 </div>
@@ -214,6 +218,7 @@
   <!-- Footer -->
 <!-- End of .container -->
                 <!-- End of Footer -->
+             
         <script
           src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
           integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -229,6 +234,7 @@
           integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
           crossorigin="anonymous"
         ></script>
+        
         <script src="/javascript/converter.js"></script>
         {{#if loggedIn}}
       <script src="/javascript/logout.js"></script>

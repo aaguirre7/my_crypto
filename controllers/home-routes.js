@@ -1,6 +1,7 @@
 const router = require("express").Router();
 const axios = require("axios");
 const { User } = require("../models");
+
 // coin JSON data
 const config = {
   method: 'get',
@@ -20,16 +21,20 @@ router.get("/",async (req, res) => {
 });
 
 router.get("/login", (req, res) => {
-  res.render("login", { layout: "index" });
+  res.render("login", { layout: "index", loggedIn: req.session.loggedIn });
 });
 
 router.get("/myCrypto",async (req, res) => {
   const coinFeed = await axios(config)
-  res.render("myCrypto", { layout: "index", coin: coinFeed.data.data });
+  res.render("myCrypto", { layout: "index", coin: coinFeed.data.data, loggedIn: req.session.loggedIn });
 });
 
 router.get("/coinConverter", (req, res) => {
-  res.render("coinConverter", { layout: "index" });
+  res.render("coinConverter", { layout: "index", loggedIn: req.session.loggedIn });
+});
+
+router.get("/about", (req, res) => {
+  res.render("about", { layout: "index", loggedIn: req.session.loggedIn });
 });
 
 module.exports = router;
