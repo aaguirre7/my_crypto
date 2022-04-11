@@ -122,7 +122,7 @@ Used Node.js to create an application that uses technologies like axios, handleb
 
 ### Links
 * Heroku: https://fathomless-ocean-39616.herokuapp.com/
-* Project Link:
+* Project Link: https://github.com/aaguirre7/my_crypto
 
 Thank you for taking time looking at this page.
 
