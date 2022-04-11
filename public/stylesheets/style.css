@@ -368,3 +368,11 @@ h1:hover {
   margin-left: 400px;
   padding: 30px;
 }
+
+.login-message {
+  color: white;
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  margin-left: 18px;
+}
